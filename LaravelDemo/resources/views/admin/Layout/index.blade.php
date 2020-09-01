@@ -25,6 +25,7 @@
 
     <!-- DataTables Responsive CSS -->
     <link href="js_css_admin/bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+    <script type="text/javascript" language="javascript" src="js_css_admin/ckeditor/ckeditor.js" ></script>
 </head>
 
 <body>
