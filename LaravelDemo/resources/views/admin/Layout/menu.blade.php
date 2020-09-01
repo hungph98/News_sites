@@ -43,10 +43,10 @@
                             <a href="admin/tintuc/danhsach"><i class="fa fa-bar-chart-o fa-fw"></i>Tin Tức<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="admin/loaitin/danhsach">Danh sách</a>
+                                    <a href="admin/tintuc/danhsach">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="admin/loaitin/them">Thêm</a>
+                                    <a href="admin/tintuc/them">Thêm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -55,10 +55,10 @@
                             <a href="admin/slide/danhsach"><i class="fa fa-bar-chart-o fa-fw"></i>Slide<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="admin/loaitin/danhsach">Danh sách</a>
+                                    <a href="admin/slide/danhsach">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="admin/loaitin/them">Thêm</a>
+                                    <a href="admin/slide/them">Thêm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
