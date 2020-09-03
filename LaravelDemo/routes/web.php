@@ -26,7 +26,7 @@ Route::get('thu',function(){
 	}
 });
 //Route Groups
-Route::group(['prefix'=>'admin'],function(){
+Route::group(['prefix'=>'admin','middleware'=>'adminlogout'],function(){
 	Route::group(['prefix'=>'theloai'],function(){
 		Route::get('danhsach','theloaiController@getdanhsach');
 		//Thêm
@@ -74,12 +74,20 @@ Route::group(['prefix'=>'admin'],function(){
 		//Sửa
 		Route::get('sua/{id}','slideController@getsua');
 		Route::post('sua/{id}','slideController@postsua');
+		//Xóa
+		Route::get('xoa/{id}','slideController@getxoa');
 	});
 	//User
 	Route::group(['prefix'=>'user'],function(){
-		Route::get('danhsach','theloaiController@getDanhsach');
-		Route::get('them','theloaiController@getthem');	
-		Route::get('sua','theloaiController@getsua');
+		Route::get('danhsach','userController@getDanhsach');
+		//Thêm
+		Route::get('them','userController@getthem');	
+		Route::post('them','userController@postthem');
+		//Sửa
+		Route::get('sua/{id}','userController@getsua');
+		Route::post('sua/{id}','userController@postsua');
+		//Xóa
+		Route::get('xoa/{id}','userController@getxoa');
 	});
 	
 	//Ajax
@@ -89,3 +97,8 @@ Route::group(['prefix'=>'admin'],function(){
 });
 
 
+//Đăng nhập login
+Route::get('admin/dangnhap','userController@getdangnhapAdmin');
+Route::post('admin/dangnhap','userController@postdangnhapAdmin');
+//Logout
+Route::get('admin/logout','userController@getlogout');

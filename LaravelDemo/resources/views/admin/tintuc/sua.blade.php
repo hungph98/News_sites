@@ -5,7 +5,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Tin tức
+                        <h1 class="page-header">News
                             <small>{{ $tintuc->TieuDe }}</small>
                         </h1>
                     </div>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Tóm tắt</label>
-                                <input class="form-control" name="Tomtat" value="{{ $tintuc->TomTat }}" value="{{ $tintuc->NoiDung }}" placeholder="Nhập tóm tắt" />
+                                <input class="form-control" name="TomTat" value="{{ $tintuc->TomTat }}" value="{{ $tintuc->NoiDung }}" placeholder="Nhập tóm tắt" />
                             </div>
                             <div class="form-group">
                                 <label>Nội dung</label>
@@ -109,9 +109,9 @@
                             <tr align="center">
                                 <th>ID</th>
                                 <th>Người dùng</th>
-                                <th>Nội dung</th>
+                                <th>Nội Dung</th>
                                 <th>Ngày đăng</th>
-                                <th>Delete</th>
+                                <th>Xóa</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -121,7 +121,7 @@
                                     <td>{{ $cm->user->name }}</td>
                                     <td>{{ $cm->NoiDung }}</td>
                                     <td>{{ $cm->created_at }}</td>
-                                    <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/comment/xoa/{{ $cm->id }}/{{ $tintuc->id }}">Xóa</a></td>
+                                    <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/comment/xoa/{{ $cm->id }}/{{ $tintuc->id }}">Delete</a></td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -12,14 +12,14 @@
                     <!-- /.col-lg-12 -->
                     <div class="col-lg-7" style="padding-bottom:120px">
                         @if (count($errors) > 0)
-                            <div class="arlert arlert-danger" >
+                            <div class="alert alert-danger" >
                                 @foreach($errors->all() as $err)
                                     {{ $err }}<br>
                                 @endforeach
                             </div>
                         @endif
                         @if (session('thongbao'))
-                            <div class="arlert arlert-success">
+                            <div class="alert alert-success">
                                 {{ session('thongbao') }}
                             </div>
                         @endif
@@ -27,7 +27,7 @@
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                             <div class="form-group">
                                 <label>Thể loại</label>
-                                <select class="form-control" name="theloai" id="theloai">
+                                <select class="form-control" name="Theloai" id="theloai">
                                     @foreach ($theloai as $tl)
                                         <option value="{{ $tl->id }}">{{ $tl->Ten }}</option>}
                                     @endforeach
@@ -44,11 +44,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Tiêu đề</label>
-                                <input class="form-control" name="Tieude" placeholder="Nhập tiêu đề" />
+                                <input class="form-control" name="tieude" placeholder="Nhập tiêu đề" />
                             </div>
                             <div class="form-group">
                                 <label>Tóm tắt</label>
-                                <input class="form-control" name="Tomtat" placeholder="Nhập tóm tắt" />
+                                <input class="form-control" name="Tomtat" placeholder="nhập tóm tắt" />
                             </div>
                             <div class="form-group">
                                 <label>Nội dung</label>

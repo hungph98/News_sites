@@ -6,7 +6,6 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">Thể loại
-                            <small>Thêm</small>
                         </h1>   
                     </div>
                     <!-- /.col-lg-12 -->
@@ -26,7 +25,7 @@
                         <form action="admin/theloai/them" method="POST">
                             <input type="hidden" name="_token" value="{{ csrf_token()}}"/>
                             <div class="form-group">
-                                <label>Tên thể loại </label>
+                                <label>Tên thể loại</label>
                                 <input class="form-control" name="Ten" placeholder="Nhập tên thể loại" />
                             </div>
                             <button type="submit" class="btn btn-default">Thêm</button>

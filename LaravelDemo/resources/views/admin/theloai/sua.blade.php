@@ -29,7 +29,7 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                             <div class="form-group">
                                 <label>Tên thể loại</label>
-                                <input class="form-control" name="Ten" placeholder="Điền tên thể loại" value="{{  $theloai->Ten}}" />
+                                <input class="form-control" name="Ten" placeholder="Nhập tên thể loại" value="{{  $theloai->Ten}}" />
                             </div>
                             
                             <button type="submit" class="btn btn-default">Sửa</button>

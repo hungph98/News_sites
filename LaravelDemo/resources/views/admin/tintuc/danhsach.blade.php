@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Tin Tức
+                        <h1 class="page-header">Tin tức
                             <small>Danh sách</small>
                         </h1>
                     </div>
@@ -23,13 +23,13 @@
                                 <th>ID</th>
                                 <th>Tiêu đề</th>
                                 <th>Tóm tắt</th>
-                                <th>Hình</th>
+                                <th>Hình ảnh</th>
                                 <th>Thể loại</th>
                                 <th>Loại tin</th>
-                                <th>Số lần xem</th>
+                                <th>Số lượt xem</th>
                                 <th>Nổi bật</th>
-                                <th>Delete</th>
-                                <th>Edit</th>
+                                <th>Xóa</th>
+                                <th>Sửa</th>
                             </tr>
                         </thead>
                         <tbody>

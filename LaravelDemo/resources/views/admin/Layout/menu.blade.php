@@ -13,10 +13,10 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="admin/Dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="admin/theloai/danhsach"><i class="fa fa-bar-chart-o fa-fw"></i>Thể Loại<span class="fa arrow"></span></a>
+                            <a href="admin/theloai/danhsach"><i class="fa fa-bar-chart-o fa-fw"></i>Thể loại<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="admin/theloai/danhsach">Danh sách</a>
@@ -28,10 +28,10 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="admin/loaitin/danhsach"><i class="fa fa-bar-chart-o fa-fw"></i>Loại Tin<span class="fa arrow"></span></a>
+                            <a href="admin/loaitin/danhsach"><i class="fa fa-bar-chart-o fa-fw"></i>Loại tin<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="admin/loaitin/danhsach">Danh sách</a>
+                                    <a href="admin/loaitin/danhsach">Loại tin</a>
                                 </li>
                                 <li>
                                     <a href="admin/loaitin/them">Thêm</a>
@@ -40,7 +40,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="admin/tintuc/danhsach"><i class="fa fa-bar-chart-o fa-fw"></i>Tin Tức<span class="fa arrow"></span></a>
+                            <a href="admin/tintuc/danhsach"><i class="fa fa-bar-chart-o fa-fw"></i>Tin tức<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="admin/tintuc/danhsach">Danh sách</a>
@@ -64,13 +64,13 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
+                            <a href="admin/user/danhsach"><i class="fa fa-users fa-fw"></i> User<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">List User</a>
+                                    <a href="admin/user/danhsach">Danh sách</a>
                                 </li>
                                 <li>
-                                    <a href="#">Add User</a>
+                                    <a href="admin/slide/Add">Thêm</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
