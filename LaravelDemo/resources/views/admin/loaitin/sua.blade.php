@@ -29,7 +29,7 @@
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="form-group">
                                 <label>Thể loại</label>
-                                <select class="form-control" name="theloai">
+                                <select class="form-control" name="Type of news">
                                     @foreach ($theloai as $tl)
                                         <option 
                                         @if ($loaitin -> idtheloai == $tl -> id)
@@ -41,7 +41,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Tên loại tin</label>
-                                <input class="form-control" name="Ten" placeholder="Nhập tên loại tin" />
+                                <input class="form-control" name="ten" placeholder="Nhập tên loại tin" />
                             </div>
                             
                             <button type="submit" class="btn btn-default">Sửa</button>

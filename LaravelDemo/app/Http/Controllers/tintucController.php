@@ -42,11 +42,11 @@ class tintucController extends Controller
 
             ]);
         $tintuc = new tintuc;
-        $tintuc->TieuDe = $request-> TieuDe;
+        $tintuc->TieuDe = $request->TieuDe;
         $tintuc->TieuDeKhongDau = changeTitle($request->TieuDe);
-        $tintuc->idloaitin =$request-> loaitin;
-        $tintuc->TomTat = $request-> TomTat;
-        $tintuc->NoiDung = $request-> NoiDung;
+        $tintuc->idloaitin =$request->loaitin;
+        $tintuc->TomTat = $request->TomTat;
+        $tintuc->NoiDung = $request->NoiDung;
         $tintuc->SoLuotXem = 0;
         if ($request->hasFile('Hinh')) {
               $file = $request->file('Hinh');
@@ -74,29 +74,28 @@ class tintucController extends Controller
     }
     public function getsua($id)
     {
-        $theloai = theloai::all();
-        $loaitin = loaitin::all();
+      $theloai = theloai::all();
+      $loaitin = loaitin::all();
     	$tintuc = tintuc::find($id);
-        return view('admin.tintuc.sua',['tintuc'=>$tintuc,'theloai'=>$theloai,'loaitin'=>$loaitin]);
+      return view('admin.tintuc.sua',['tintuc'=>$tintuc,'theloai'=>$theloai,'loaitin'=>$loaitin]);
     }
     public function postsua(Request $request,$id)
     {
-        $tintuc = tintuc::find($id);
-        $this->validate($request,
-            [
-                'loaitin'=>'required',
-                'TieuDe'=>'required|unique:tintuc,TieuDe',
-                'TomTat'=>'required',
-                'NoiDung'=>'required'
-            ],
-            [
-                'loaitin.required'=>'Bạn chưa có loại tin',
-                'TieuDe.required'=>'Bạn chưa có tiêu đề',
-                'TieuDe.unique'=>'Tiêu đề đã tồn tại',
-                'TomTat.required'=>'Bạn chưa có tóm tắt',
-                'NoiDung.required'=>'Bạn chưa có nội dung'
-
-            ]);
+      $tintuc = tintuc::find($id);
+      $this->validate($request,
+        [
+          'loaitin'=>'required',
+          'TieuDe'=>'required|unique:tintuc,TieuDe',
+          'TomTat'=>'required',
+          'NoiDung'=>'required'
+        ],
+        [
+          'loaitin.required'=>'Bạn chưa có loại tin',
+          'TieuDe.required'=>'Bạn chưa có tiêu đề',
+          'TieuDe.unique'=>'Tiêu đề đã tồn tại',
+          'TomTat.required'=>'Bạn chưa có tóm tắt',
+          'NoiDung.required'=>'Bạn chưa có nội dung'
+        ]);
         $tintuc->TieuDe = $request->TieuDe;
         $tintuc->TieuDeKhongDau = changeTitle($request->TieuDe);
         $tintuc->idloaitin =$request->loaitin;
@@ -104,21 +103,21 @@ class tintucController extends Controller
         $tintuc->NoiDung = $request->NoiDung;
         //$tintuc->SoLuotXem = 0;
         if ($request->hasFile('Hinh')) {
-              $file = $request->file('Hinh');
-              $duoi = $file->getClientOriginalExtension();
-              if($duoi!= 'jpg' && $duoi!='png')
-              {
-                return redirect('admin/tintuc/them')->with('thongbao','File không chính xác');
-              }
-              $name = $file->getClientOriginalName();
-              $Hinh = str_random(4)."_".$name;
-              while(file_exists("hinhanh/tintuc".$Hinh))
-              {
-                $Hinh = str_random(4)."_".$name;
-              }
-              $file->move("hinhanh/tintuc",$Hinh);
-              unlink("hinhanh/tintuc".$tintuc->$Hinh);
-              $tintuc->Hinh = $Hinh;
+          $file = $request->file('Hinh');
+          $duoi = $file->getClientOriginalExtension();
+          if($duoi!= 'jpg' && $duoi!='png')
+          {
+            return redirect('admin/tintuc/them')->with('thongbao','File không chính xác');
+          }
+          $name = $file->getClientOriginalName();
+          $Hinh = str_random(4)."_".$name;
+          while(file_exists("hinhanh/tintuc".$Hinh))
+          {
+            $Hinh = str_random(4)."_".$name;
+          }
+          $file->move("hinhanh/tintuc",$Hinh);
+          unlink("hinhanh/tintuc".$tintuc->$Hinh);
+          $tintuc->Hinh = $Hinh;
         }else
         {
             $tintuc->Hinh = "";

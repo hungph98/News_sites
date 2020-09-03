@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Slide
+                        <h1 class="page-header">User
                             <small>Danh sách</small>
                         </h1>
                     </div>
@@ -21,34 +21,28 @@
                         <thead>
                             <tr align="center">
                                 <th>ID</th>
-                                <th>Tên </th>
-                                <th>Nội dung</th>
-                                <th>Hình</th>
-                                <th>Link</th>
-                                <th>Delete</th>
-                                <th>Edit</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Quyền</th>
+                                <th>Xóa</th>
+                                <th>Sửa</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($slide as $sd)
+                            @foreach ($user as $u)
                             <tr class="odd gradeX" align="center">
-                                <td>{{ $sd->id }}</td>
-                                <td>{{ $sd->Ten }}</td>
-                                <td>{{ $ad->NoiDung }}</td>
+                                <td>{{ $u->id }}</td>
+                                <td>{{ $u->name }}</td>
+                                <td>{{ $u->email }}</td>
                                 <td>
-                                    <img src="hinhanh/slide/{{ $sd->Hinh }}" alt="">
-                                </td>
-                                <td>{{ $sd->link }}</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/slide/xoa/{{ $sd->id }}"> Xóa</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/slide/sua/{{ $sd->id }}">Edit</a></td>
-                            </tr>
-                            <tr class="even gradeC" align="center">
-                                <td>2</td>
-                                <td>Bóng Đá</td>
-                                <td>Thể Thao</td>
-                                <td>Ẩn</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="#"> Delete</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="#">Edit</a></td>
+                                    @if($u->quyen == 1)
+                                    {{ "Admin" }}
+                                    @else
+                                    {{ "Thường" }}
+                                    @endif
+                                </td>           
+                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/user/xoa/{{ $u->id }}">Xóa</a></td>
+                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/user/sua/{{ $u->id }}">Sửa</a></td>
                             </tr>
                             @endforeach
                         </tbody>

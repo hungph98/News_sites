@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Khóa Học Lập Trình Laravel Framework 5.x Tại Khoa Phạm">
     <meta name="author" content="">
-    <title>Trang tin tức</title>
+    <title>Laravel Demo</title>
     <base href="{{  asset('')  }}" target="_blank, _self, _parent, _top">
     <!-- Bootstrap Core CSS -->
     <link href="js_css_admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
